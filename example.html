@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ExamenParcial_Mapa</title>
+        <style>
+          #map-canvas {
+            margin-top: 10%;
+            margin-left: 10%;
+            margin-right: 10%;
+            width: 80%;
+            height: 500px;
+          }
+        </style>
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script>
+          function initialize()
+          {
+            var mapCanvas = document.getElementById('map-canvas');
+            var mapOptions = {
+              center: new google.maps.LatLng(20.666468, -103.392834),
+              zoom: 12,
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            var map = new google.maps.Map(mapCanvas, mapOptions);
+              
+              
+              
+              
+            var Home = new google.maps.LatLng(20.659099, -103.436048);
+            var marker = new google.maps.Marker({
+                  position: Home,
+                  map: map,
+                  title: 'Home'
+              });
+              
+              
+              
+              
+            var Tec = new google.maps.LatLng(20.732253, -103.457294);
+            var marker = new google.maps.Marker({
+                  position: Tec,
+                  map: map,
+                  title: 'Tec'
+              });
+              
+              
+            var Asalto = new google.maps.LatLng(20.696849, -103.373438);
+            var marker = new google.maps.Marker({
+                  position: Asalto,
+                  map: map,
+                  title: 'Asalto'
+              });
+          }
+          google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+    </head>
+    <body>
+         <div id="map-canvas"></div>
+    </body>
+</html>
